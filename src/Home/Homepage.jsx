@@ -28,7 +28,7 @@ const Homepage = () => {
         </div>
         <div>
           <span className="cursor-pointer bg-fuchsia-300 shadow-sm hover:shadow-inner rounded-full shadow-gray-700 text-white p-3">
-            <Link to="/login">Login/Signup</Link>
+            <Link to="/purchase">Login/Signup</Link>
           </span>
         </div>
       </div>
