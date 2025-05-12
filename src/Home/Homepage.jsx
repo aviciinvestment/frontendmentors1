@@ -22,13 +22,13 @@ const Homepage = () => {
       <div className="flex items-center justify-between">
         <div>
           <Link className="flex items-center" to="/">
-            <img className="mix-blend-darken w-28" src={image} alt="" />
-            <div className="font-bold text-2xl">Clouds services</div>
+            <img className="mix-blend-darken w-[20%]" src={image} alt="" />
+            <div className="font-bold text-xl">Clouds services</div>
           </Link>
         </div>
         <div>
-          <span className="cursor-pointer bg-fuchsia-300 shadow-sm hover:shadow-inner rounded-full shadow-gray-700 text-white p-3">
-            <Link to="/purchase">Login/Signup</Link>
+          <span className="cursor-pointer text-xs bg-fuchsia-300 shadow-sm hover:shadow-inner rounded-full shadow-gray-700 text-white p-3">
+            <Link to="/login">Login/Signup</Link>
           </span>
         </div>
       </div>

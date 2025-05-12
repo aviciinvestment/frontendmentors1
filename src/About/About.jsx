@@ -1,12 +1,26 @@
 import React from "react";
-import ai from "../assets/AIRTIME Trampolinpark.jpg";
-
+import service from "../assets/AIRTIME Trampolinpark.jpg";
+import ai from "../assets/Five Reasons Why Virtual Reality Is A Game-Changer.jpg";
+import Aboutitem from "./Aboutitem";
+import AboutFooter from "./AboutFooter";
+const Abouts = [
+  { image: ai, text: "Chat with our Exclusive AI assistant", link: "/" },
+  { image: service, text: "Patronize us", link: "/purchase" },
+];
 const About = () => {
   return (
     <div>
-      <div>
-        <img src={ai} alt="" />
-      </div>
+      {Abouts.map((elem, i) => {
+        return (
+          <Aboutitem
+            image={elem.image}
+            text={elem.text}
+            key={i}
+            link={elem.link}
+          />
+        );
+      })}
+      <AboutFooter />
     </div>
   );
 };
