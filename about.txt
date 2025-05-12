@@ -1,0 +1,56 @@
+##############################
+*PROJECT ABOUTS*
+***Consumers website***
+-food category showcasing 
+-adding food to cart
+-ordering food
+-customer feedbacks based on satisfaction(food quality, and time delivered)
+-customer Authentications
+-customer care 
+-Displaying food readiness state 
+-automatic payments
+
+***Cuisine internal page****
+-displayed menu
+-choosing food 
+-records
+-customer follow up
+
+###############################
+*technology to use*
+***Cuisine internal page****
+! React
+! React Router
+! react Query
+! REDUX for practicing
+! Context Api
+! tailwind Css
+! Styled component 
+! supabase : Backend!!!
+
+***Cuisine internal page****
+! Next.js
+! Next Router
+! Context Api
+! tailwind Css
+! Styled component 
+! supabase : Backend!!!
+
+##############################
+*PAGES REQUIRED*
+-menu showglass
+----cart
+--------ordering
+-login/signup
+-profile
+
+-Home PAGES
+-About cuisine 
+....
+
+
+##########################
+deadline🚨🚨
+may 30th
+dedication 2hours daily
+
