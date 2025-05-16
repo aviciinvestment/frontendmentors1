@@ -11,8 +11,8 @@ const Record = () => {
 
   if (purchased.length === 0)
     return (
-      <div className="text-center text-3xl uppercase text-fuchsia-300">
-        no history yet
+      <div className="text-3xl uppercase bg-gray-100 text-fuchsia-300 flex-col h-lvh flex">
+        <h1 className="self-center my-[35%]">no history yet</h1>
       </div>
     );
 

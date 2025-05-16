@@ -1,23 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "../ui/Login";
 
 const Landing = () => {
   return (
-    <div className="gap-5">
-      <div>
-        <span className=" shadow-sm rounded-full shadow-gray-700 text-black p-1">
-          WELCOME
-        </span>{" "}
-        ; to Clouds...
+    <div>
+      <div className="gap-5 text-white text-center my-36">
+        <h1 className="text-2xl font-bold text-gray-600">
+          <span className="text-yellow-300">FAST </span>&
+          <span className="text-blue-500"> STABLE</span>
+        </h1>
+        <h3 className="font-extrabold text-[2.5rem] text-gray-400">VTU</h3>
       </div>
-      <div>Perform All your online trade with the best of experiences</div>
-      <div>
-        <span>motto:</span>You can bank on us
-      </div>
-      <div className="mt-4">
-        <span className=" cursor-pointer bg-fuchsia-600 shadow-sm hover:shadow-inner rounded-full shadow-gray-700 text-white p-3">
-          <Link to="about">GET STARTED</Link>
-        </span>
+      <Login />
+      <div className="flex items-center my-6">
+        <Link className="text-gray-500 text-center w-full" to="/about">
+          Show more...
+        </Link>
       </div>
     </div>
   );

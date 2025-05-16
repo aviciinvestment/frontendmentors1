@@ -1,6 +1,6 @@
 //import React, { useEffect, useState } from "react";
 import { FaDotCircle } from "react-icons/fa";
-import logo from "../assets/Cloud Airplane Logo.jpg";
+import logo from "../assets/Cloud Airplane Logo.svg";
 
 const Menuitem = ({ image, service, handleclick, keys }) => {
   return (
@@ -10,41 +10,36 @@ const Menuitem = ({ image, service, handleclick, keys }) => {
           handleclick(e);
         }}
         data-user={keys}
-        className="w-[80%] cursor-pointer mx-auto sm:w-full h-96 shadow-md hover:drop-shadow-2xl shadow-slate-300 m-10 rounded-md"
+        className="w-[70%] sm:w-full gap-2 flex sm:flex-row flex-col m-auto shadow-md mb-3 shadow-gray-400 rounded-lg p-2"
       >
         <img
           data-user={keys}
           width="100%"
-          className="h-[70%]"
+          className="w-full sm:w-[50%] h-72"
           src={image}
           alt="img"
         />
-        <div
-          data-user={keys}
-          className="bg-fuchsia-100 h-[30%] p-3 flex justify-between"
-        >
-          <div data-user={keys} className="p-2 font-bold text-xl">
-            <h1 data-user={keys}>Clouds</h1>
-            <img
-              data-user={keys}
-              className="mix-blend-darken w-16"
-              src={logo}
-              alt=""
-            />
+        <div data-user={keys} className="flex justify-between sm:flex-col mx-3">
+          <div data-user={keys} className="flex self-center">
+            <h1 data-user={keys} className="font-bold text-2xl">
+              Clouds
+            </h1>
+            <img data-user={keys} className="size-10" src={logo} alt="" />
           </div>
 
-          <div
-            data-user={keys}
-            className="p-2 text-xl border-l-2 border-white "
-          >
-            <h1 data-user={keys} className="font-semibold uppercase">
+          <div data-user={keys} className="text-right flex flex-col">
+            <h1
+              data-user={keys}
+              className="font-medium text-xl font-sans text-gray-600 uppercase"
+            >
               {service}
             </h1>
-            <h3 data-user={keys}>Affordable and Lasting</h3>
-            <p data-user={keys}>MTN AIRTEL GLO 9MOBILE</p>
-          </div>
-          <div data-user={keys}>
-            <FaDotCircle className="text-green-500" />
+            <h3 className="font-medium" data-user={keys}>
+              Affordable and Lasting
+            </h3>
+            <p className="font-medium text-gray-500 text-sm" data-user={keys}>
+              MTN AIRTEL GLO 9MOBILE
+            </p>
           </div>
         </div>
       </div>

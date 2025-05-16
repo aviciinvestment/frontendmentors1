@@ -6,6 +6,7 @@ import bill from "../assets/bill.jpg";
 import PurchaseMarkup from "../ui/PurchaseMarkup";
 import Products from "../Shop/Products";
 import PurchaseForm from "../Shop/PurchaseForm";
+import Balance from "../ui/Balance";
 
 const services = [
   { img: data, service: "data" },
@@ -22,21 +23,25 @@ const Menu = () => {
     setPurchasemarkup(true);
 
     setBackground(Number(e.target.dataset.user));
+    //balance={balance} setBalance={setBalance}
   }
   return (
-    <div className="sm:flex flex-wrap sm:justify-center sm:gap-10">
-      {services.map((elem, i) => {
-        return (
-          <Menuitem
-            image={elem.img}
-            service={elem.service}
-            key={i}
-            keys={i}
-            handleclick={handleclick}
-            setBackground={setBackground}
-          />
-        );
-      })}
+    <div>
+      <Balance />
+      <div className="sm:flex w-[70%] m-auto">
+        {services.map((elem, i) => {
+          return (
+            <Menuitem
+              image={elem.img}
+              service={elem.service}
+              key={i}
+              keys={i}
+              handleclick={handleclick}
+              setBackground={setBackground}
+            />
+          );
+        })}
+      </div>
 
       {purchasemarkup && (
         <PurchaseMarkup

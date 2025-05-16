@@ -9,7 +9,7 @@ const Abouts = [
 ];
 const About = () => {
   return (
-    <div>
+    <div className="w-[70%] m-auto sm:w-[30%] sm:flex">
       {Abouts.map((elem, i) => {
         return (
           <Aboutitem
@@ -20,7 +20,6 @@ const About = () => {
           />
         );
       })}
-      <AboutFooter />
     </div>
   );
 };

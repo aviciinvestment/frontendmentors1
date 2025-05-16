@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Aboutitem = ({ image, text, link }) => {
   return (
-    <div>
+    <div className="p-3 text-white">
       <Link to={link}>
         <div>
           <img
@@ -11,7 +11,7 @@ const Aboutitem = ({ image, text, link }) => {
             src={image}
             alt="ai"
           />
-          <div className="text-2xl p-7 font-bold">{text}</div>
+          <div className="text-xl p-7 font-bold">{text}</div>
         </div>
       </Link>
     </div>

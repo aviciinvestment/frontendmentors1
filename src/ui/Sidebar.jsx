@@ -1,47 +1,44 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/Cloud Airplane Logo.jpg";
+import logo from "../assets/Cloud Airplane Logo.svg";
+import name from "../assets/NAME.svg";
 import Footer from "./Footer";
 import Balance from "./Balance";
 import { Link } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { AiFillSetting } from "react-icons/ai";
 
 const Aside = styled.aside`
   background-color: rgb(253 244 255 / var(--tw-text-opacity, 1));
   color: ${(props) => props.theme.primaryColor};
 `;
-const Sidebar = ({ balance, setBalance }) => {
+const Sidebar = () => {
   return (
-    <Aside className="h-lvh row-span-2 p-10 flex flex-col justify-between text-blue-50 relative">
+    <Aside className="flex items-center justify-between text-xs">
       <Link to="/">
-        <div className="flex flex-col">
-          <img
-            className="mix-blend-darken w-52 self-center"
-            src={logo}
-            alt=""
-          />
-          <h1 className="text-center text-3xl font-sans font-bold">
-            CLOUDS BANKING
-          </h1>
+        <div className="flex gap">
+          <img className="size-10 self-center" src={logo} alt="" />
+          <img src={name} alt="name" className="size-24" />
         </div>
       </Link>
 
-      <div className="text-2xl font-semibold uppercase">
-        <ul className="divide-y-2 divide-fuchsia-100">
-          <li className="p-4 shadow-lg shadow-fuchsia-200 rounded-lg mb-3">
-            profile
-          </li>
+      <div className="flex gap-3 mr-2">
+        <div className="flex items-center gap-1">
+          <FaUser className="size-5" />
+          <span className="self-center">username</span>
+        </div>
+        <div className="flex items-center gap-1">
           <Link to="/about">
-            <li className="p-4 shadow-lg shadow-fuchsia-200 rounded-lg mb-3">
-              About
-            </li>
+            <AiOutlineInfoCircle className="size-5" />
           </Link>
-
-          <li className="p-4 shadow-lg shadow-fuchsia-200 rounded-lg mb-3">
-            settings
-          </li>
-        </ul>
+          <span className="self-center">About</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <AiFillSetting className="size-5" />
+          <span className="self-center">Settings</span>
+        </div>
       </div>
-      <Balance balance={balance} setBalance={setBalance} />
     </Aside>
   );
 };

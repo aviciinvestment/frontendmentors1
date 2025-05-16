@@ -1,27 +1,30 @@
+import { useContext } from "react";
 import Button from "./Button";
+import { MyContext } from "../Context/CustomContext";
 
-const Balance = ({ balance, setBalance }) => {
+const Balance = () => {
+  const { balance, setBalance } = useContext(MyContext);
   return (
     <div>
-      <div className="flex flex-col gap-10">
-        <div
-          className={`bg-blue-100 rounded-md shadow-inner shadow-black ${
-            balance === 0 ? "text-red-600" : "text-green-600"
-          } p-4 text-center text-2xl`}
-        >
-          <h1>NGN {balance}</h1>
+      <div className="flex justify-between gap-5 w-[75%] m-auto sm:w-[70%] py-5">
+        <div className="flex flex-col justify-left gap-5 w-28 py-5">
+          <h1 className="text-xl font-extrabold self-center">Balance</h1>
+          <div
+            className={`${
+              balance === 0 ? "text-red-600" : "text-green-600"
+            } text-xs bg-gray-200 text-center p-2`}
+          >
+            <h1>NGN: {balance}</h1>
+          </div>
         </div>
-        <h1 className="font-bold text-3xl text-center uppercase text-fuchsia-900">
-          Balance
-        </h1>
 
         <button
           onClick={() => {
             setBalance(balance + 1000);
           }}
-          className=" w-[70%] hover:ring-offset-2 m-auto transition-all outline-none text-white bg-blue-400 border-none  rounded-[10px] hover:ring-4 ring-fuchsia-300 p-3"
+          className="bg-blue-800 p-2 self-center rounded-[2px] shadow-sm text-white shadow-gray-400"
         >
-          ADD MONEY
+          Add money
         </button>
       </div>
     </div>

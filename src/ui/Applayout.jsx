@@ -8,11 +8,13 @@ const Applayout = ({ children }) => {
   const [balance, setBalance] = useState(0);
   const [purchased, setPurchased] = useState([]);
   return (
-    <div className="grid grid-cols-[1fr,2fr] sm:grid-cols-[1fr,3fr] grid-rows-[0.2fr,0.8fr] ">
-      <Sidebar balance={balance} setBalance={setBalance} />
+    <div className="">
+      <Sidebar />
       <Header />
-      <MyContext.Provider value={{ purchased, setPurchased, balance }}>
-        <main className="overflow-y-scroll h-lvh">{children}</main>
+      <MyContext.Provider
+        value={{ purchased, setPurchased, balance, setBalance }}
+      >
+        <main className="">{children}</main>
       </MyContext.Provider>
     </div>
   );
