@@ -23,19 +23,19 @@ const Sidebar = () => {
         </div>
       </Link>
 
-      <div className="flex gap-3 mr-2">
-        <div className="flex items-center gap-1">
-          <FaUser className="size-5" />
+      <div className="flex gap-3 mr-2 text-xs font-medium">
+        <div className="flex items-center  gap-1">
+          <FaUser className="size-4" />
           <span className="self-center">username</span>
         </div>
         <div className="flex items-center gap-1">
           <Link to="/about">
-            <AiOutlineInfoCircle className="size-5" />
+            <AiOutlineInfoCircle className="size-4" />
           </Link>
           <span className="self-center">About</span>
         </div>
         <div className="flex items-center gap-1">
-          <AiFillSetting className="size-5" />
+          <AiFillSetting className="size-4" />
           <span className="self-center">Settings</span>
         </div>
       </div>
