@@ -10,7 +10,7 @@ const Menuitem = ({ image, service, handleclick, keys }) => {
           handleclick(e);
         }}
         data-user={keys}
-        className="w-full gap-2 flex sm:flex-row flex-col m-auto shadow-md mb-3 shadow-gray-400 rounded-lg p-2"
+        className="w-full gap-2 flex sm:flex-row flex-col m-auto shadow-md mb-3 shadow-gray-400 rounded-sm p-2"
       >
         <img
           data-user={keys}
