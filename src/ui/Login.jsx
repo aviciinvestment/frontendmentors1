@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="w-[30rem] m-auto">
+    <div className="sm:w-[30rem] m-auto">
       <div className="flex flex-col text-white bg-gray-950 p-4 rounded-lg">
         <form>
           <fieldset className="flex flex-col">
