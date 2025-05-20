@@ -10,7 +10,7 @@ const Menuitem = ({ image, service, handleclick, keys }) => {
           handleclick(e);
         }}
         data-user={keys}
-        className="w-full gap-2 flex sm:flex-row flex-col m-auto shadow-md mb-3 shadow-gray-400 rounded-sm p-2"
+        className="w-full gap-2 flex sm:flex-row flex-col m-auto shadow-md mb-3 sm:shadow-gray-400 shadow-gray-200 rounded-sm p-2"
       >
         <img
           data-user={keys}
@@ -21,7 +21,7 @@ const Menuitem = ({ image, service, handleclick, keys }) => {
         />
         <div data-user={keys} className="flex justify-between sm:flex-col mx-3">
           <div data-user={keys} className="flex self-center items-center">
-            <h1 data-user={keys} className="font-bold text-xl self-center">
+            <h1 data-user={keys} className="font-bold text-md self-center">
               Clouds
             </h1>
             <img data-user={keys} className="size-6 " src={logo} alt="" />
@@ -34,7 +34,7 @@ const Menuitem = ({ image, service, handleclick, keys }) => {
             >
               {service}
             </h1>
-            <h3 className="font-medium" data-user={keys}>
+            <h3 className="font-medium text-xs" data-user={keys}>
               Affordable and Lasting
             </h3>
             <p className="font-medium text-gray-500 text-xs" data-user={keys}>

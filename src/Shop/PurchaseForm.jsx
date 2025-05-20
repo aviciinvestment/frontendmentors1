@@ -70,10 +70,10 @@ const PurchaseForm = ({ background, service }) => {
   if (background > 1)
     return <div className="w-full text-center">page under construction</div>;
   return (
-    <form className="w-[70%] m-auto text-center">
+    <form className="w-full m-auto text-center">
       <input
         data-user="stick"
-        className="m-6 w-[70%] hover:ring-offset-2 ring-[1px] ring-offset-[1px] ring-black transition-all outline-none text-blue-950 bg-blue-100 border-none  rounded-sm hover:ring-[1px] hover:ring-fuchsia-700 p-3"
+        className="m-6 w-[86%] hover:ring-offset-2 ring-[1px] ring-offset-[1px] ring-black transition-all outline-none text-blue-950 bg-blue-100 border-none  rounded-sm hover:ring-[1px] hover:ring-fuchsia-700 p-3"
         type="number"
         placeholder="07067424246"
         onChange={(e) => {

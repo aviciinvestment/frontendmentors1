@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Menuitem from "./Menuitem";
 import data from "../assets/Revealing Data.gif";
 import airtime from "../assets/Airtime.jpg";
@@ -7,6 +7,7 @@ import PurchaseMarkup from "../ui/PurchaseMarkup";
 import Products from "../Shop/Products";
 import PurchaseForm from "../Shop/PurchaseForm";
 import Balance from "../ui/Balance";
+import { MyContext } from "../Context/CustomContext";
 
 const services = [
   { img: data, service: "data" },
@@ -15,7 +16,7 @@ const services = [
 ];
 
 const Menu = () => {
-  const [purchasemarkup, setPurchasemarkup] = useState(false);
+  const { purchasemarkup, setPurchasemarkup } = useContext(MyContext);
   const [background, setBackground] = useState(0);
   const [service, setService] = useState(0);
 

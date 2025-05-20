@@ -4,7 +4,7 @@ const Products = ({ background, setService, service }) => {
   if (background > 1) return;
   return (
     <div>
-      <div data-user="stick" className="w-full flex justify-around p-12">
+      <div data-user="stick" className="w-full flex justify-around  p-2">
         <div
           data-user="stick"
           className={`w-[20%] h-24 ${

@@ -1,20 +1,22 @@
-import React from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 import Footer from "../ui/Footer";
 import Landing from "./Landing";
 
 import Homeheader from "./Homeheader";
+import HomeNav from "./HomeNav";
+
 /*          <span className="">
             <Link to="/login">Login/Signup</Link>
           </span>*/
 const Homepage = () => {
-  const location = useLocation();
-  console.log(location);
+  const [shownav, setShownav] = useState(false);
 
   return (
     <div className="bg-black min-h-lvh">
-      <Homeheader />
+      <Homeheader setShownav={setShownav} shownav={shownav} />
+      <HomeNav setShownav={setShownav} shownav={shownav} />
 
       <div className=" ">
         <Landing />

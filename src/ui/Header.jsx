@@ -8,7 +8,7 @@ const Headers = styled.header`
 
 const Header = () => {
   return (
-    <Headers className="font-medium text-xs">
+    <Headers className="font-medium bg-gray-50 text-xs">
       <ul className="flex justify-between sm:w-[50%] m-auto w-[70%]">
         <li>
           <Link className="hover:border-y-[1px] border-orange-700" to="/">

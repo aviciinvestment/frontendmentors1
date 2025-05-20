@@ -1,6 +1,6 @@
 import React from "react";
 
-const PurchaseMarkup = ({ setPurchasemarkup, image, children }) => {
+const PurchaseMarkup = ({ setPurchasemarkup, children }) => {
   function outclick(e) {
     if (e.target.dataset.user === "stick") return;
     setPurchasemarkup(false);
@@ -10,18 +10,9 @@ const PurchaseMarkup = ({ setPurchasemarkup, image, children }) => {
       onClick={(e) => {
         outclick(e);
       }}
-      className={`z-30 absolute flex-col justify-center w-full top-0 left-0 right-0 -bottom-56 backdrop-blur-sm bg-transparent flex`}
+      className={`z-30 absolute w-full top-0 py-16 left-0 right-0 h-lvh backdrop-blur-sm bg-opacity-50 bg-black`}
     >
-      <div
-        data-user="stick"
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-        className="w-[30rem] m-auto"
-      >
+      <div data-user="stick" className="sm:w-[30rem] w-full m-auto">
         {children}
       </div>
     </div>

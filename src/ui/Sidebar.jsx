@@ -10,7 +10,9 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { AiFillSetting } from "react-icons/ai";
 
 const Aside = styled.aside`
-  background-color: rgb(253 244 255 / var(--tw-text-opacity, 1));
+  background-color: --tw-bg-opacity: 1;
+    background-color:  rgb(249 250 251 / var(--tw-bg-opacity, 1));
+ 
   color: ${(props) => props.theme.primaryColor};
 `;
 const Sidebar = () => {
@@ -18,23 +20,23 @@ const Sidebar = () => {
     <Aside className="flex items-center justify-between text-xs">
       <Link to="/">
         <div className="flex gap">
-          <img className="size-10 self-center" src={logo} alt="" />
-          <img src={name} alt="name" className="size-24" />
+          <img className="size-7 self-center" src={logo} alt="" />
+          <img src={name} alt="name" className="size-16 sm:size-24" />
         </div>
       </Link>
 
       <div className="flex gap-3 mr-2 text-xs font-medium">
-        <div className="flex items-center  gap-1">
+        <div className="flex items-center gap-[2px]">
           <FaUser className="size-4" />
           <span className="self-center">username</span>
         </div>
         <div className="flex items-center gap-1">
-          <Link to="/about">
-            <AiOutlineInfoCircle className="size-4" />
+          <Link className="flex gap-[2px]" to="/about">
+            <AiOutlineInfoCircle className="size-4" />{" "}
+            <span className="self-center">About</span>
           </Link>
-          <span className="self-center">About</span>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-[2px]">
           <AiFillSetting className="size-4" />
           <span className="self-center">Settings</span>
         </div>

@@ -4,7 +4,7 @@ import { StringtoList } from "../util/Helper";
 const Formselect = ({ plans, dispatch, background }) => {
   return (
     <select
-      className=" w-[70%] my-2 hover:ring-offset-2 transition-all outline-none text-white bg-blue-500 border-none  rounded-sm hover:ring-4 ring-fuchsia-700 p-3"
+      className=" w-[85%] my-2 hover:ring-offset-2 transition-all outline-none text-white bg-blue-700 border-none  rounded-sm hover:ring-4 ring-fuchsia-700 p-3"
       data-user="stick"
       name=""
       id=""
