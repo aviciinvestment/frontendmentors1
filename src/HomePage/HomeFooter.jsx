@@ -19,9 +19,9 @@ import ambassador2 from "../Assets/ambassador2.jpeg";
 
 const HomeFooter = () => {
   return (
-    <div className="bg-white text-green-950  h-52 px-2">
+    <div className="bg-white text-blue-950  h-52 px-2">
       {/*////////////////////////////////*/}
-      <div className="flex p-2 text-white sm:flex-row flex-col items-center sm:justify-between bg-green-950 px-1 flex-wrap">
+      <div className="flex p-2 text-white sm:flex-row flex-col items-center sm:justify-between bg-blue-950 px-1 flex-wrap">
         <div className="self-center">
           Fast Transactions and returns every 24 hours
         </div>
@@ -40,11 +40,11 @@ const HomeFooter = () => {
         </div>
       </div>
       {/*////////////////////////////////*/}
-      <div className="text-green-950">
+      <div className="text-blue-950">
         <div className=" sm:flex-row flex flex-col justify-center gap-6 sm:justify-between items-center px-2 py-2">
           <div className=" flex justify-between text-white items-center">
             <div className="p-4  gap-2 flex">
-              <div className="w-6 skew-x-12 bg-green-400 h-10"></div>
+              <div className="w-6 skew-x-12 bg-blue-400 h-10"></div>
               <div className="self-center text-green-950 font-extrabold text-xl">
                 Swift
               </div>
@@ -72,7 +72,7 @@ const HomeFooter = () => {
             </div>
           </div>
           <div>
-            <button className="bg-green-950 text-white p-2 rounded-full">
+            <button className="bg-blue-950 text-white p-2 rounded-full">
               meet with us{" "}
             </button>
           </div>
@@ -80,7 +80,7 @@ const HomeFooter = () => {
       </div>
 
       {/*////////////////////////////////*/}
-      <div className="flex justify-center items-center bg-green-900 text-white relative">
+      <div className="flex justify-center items-center bg-blue-900 text-white relative">
         <img className="mix-blend-multiply" src={ambassador2} alt="img" />
         <div className="absolute text-center ">
           <h1 className="font-extrabold text-2xl">Contact Us</h1>
@@ -150,7 +150,7 @@ const HomeFooter = () => {
               name=""
               id=""
             ></textarea>
-            <button className="bg-green-950 text-white p-2 rounded-full">
+            <button className="bg-blue-950 text-white p-2 rounded-full">
               Send Us Message{" "}
             </button>
           </form>
@@ -161,10 +161,10 @@ const HomeFooter = () => {
         <h1 className="text-[100px] text-white">MAP</h1>
       </div>
       {/*////////////////////////////////*/}
-      <div className="bg-green-950 text-white ">
+      <div className="bg-blue-950 text-white ">
         <div className="border-b-[1px] border-gray-700 text-white flex flex-col justify-center items-center text-center gap-3s">
           <div className="p-4  gap-2 flex">
-            <div className="w-6 skew-x-12 bg-green-400 h-10"></div>
+            <div className="w-6 skew-x-12 bg-blue-400 h-10"></div>
             <div className="self-center font-extrabold text-xl">Swift</div>
           </div>
           <p className="text-xs">
@@ -210,13 +210,13 @@ const HomeFooter = () => {
           <div>
             <h1 className="font-bold font-serif">Subscribe News Letter</h1>
             <p>to subscribe to our newsleter you nedd to be subscribed to it</p>
-            <div className="bg-green-900 rounded-full flex">
+            <div className="bg-blue-900 rounded-full flex">
               <input
-                className="bg-green-900 p-2 w-full rounded-l-full"
+                className="bg-blue-900 p-2 w-full rounded-l-full"
                 placeholder="Your Email Address"
                 type="text"
               />
-              <button className="bg-green-800 rounded-full w-full">
+              <button className="bg-blue-800 rounded-full w-full">
                 SIGN UP
               </button>
             </div>
@@ -235,7 +235,7 @@ const HomeFooter = () => {
             </h1>
           </div>
         </div>
-        <div className="relative w-8 left-64 bottom-4 bg-green-800 p-2 rounded-full ">
+        <div className="relative w-8 left-64 bottom-4 bg-blue-800 p-2 rounded-full ">
           <FaArrowUp />
         </div>
       </div>

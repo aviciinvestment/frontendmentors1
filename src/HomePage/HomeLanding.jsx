@@ -19,16 +19,17 @@ const HomeLanding = () => {
       </div>
 
       <div className="my-[100px] text-white text-center absolute top-0 w-full">
-        <h1 className="text-green-400">All-in-one-online banking</h1>
+        <h1 className="text-blue-400">All-in-one-online subscriptions</h1>
         <div className=" font-normal m-auto">
           <h1 className="sm:text-[50px] text-[30px]">
             Smart And Simple <br />
-            Online Banking
+            Online service
           </h1>
           <p className="text-gray-400 ">
-            with our secure online banking,
-            <br /> you can manage your finances at <br />
-            anywhere at anytime
+            with our secured online space,
+            <br /> you can manage all your online subscrition <br />
+            all in one place without exposing <br />
+            your pin at every instance
           </p>
         </div>
       </div>

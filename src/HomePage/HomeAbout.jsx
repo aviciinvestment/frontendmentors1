@@ -1,11 +1,69 @@
 import React from "react";
 import AboutItem from "./AboutItem";
 import Tab from "./Tab";
-import { FaUser } from "react-icons/fa6";
 
+import { FaMoneyCheck } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { FaFileInvoice } from "react-icons/fa6";
+import { FaSubscript } from "react-icons/fa6";
+const project = "swift";
 const HomeAbout = () => {
+  const TabsDetails = [
+    {
+      details: `in ${project} you can create an account and fund it, while we help with automated 
+      subscriptions and give you feedback via notifications about activities going on `,
+      title: `Funding Your Account`,
+      logo: <FaMoneyCheck />,
+    },
+
+    {
+      details: `${project} helps you control irrelevant debits from online services as they have direct access to your credit
+      card,By giving you unique card pin at every subscription instance, and makes any deduction from your permission `,
+      title: `Finance Control`,
+      logo: <FaFileInvoice />,
+    },
+
+    {
+      details: `${project} gives you proper breakdown of all your activities; subscriptions specifically, helps you breakdown
+      your data and airtime subscriptions to fit best your budget and useability`,
+      title: `Automating subscriptions of all kinds`,
+      logo: <FaSubscript />,
+    },
+  ];
+  const aboutItemsDetails = [
+    {
+      details: `update your profile and tell us more about yourself`,
+      title: `Update Profile`,
+      logo: (
+        <FaUser className="size-12 bg-blue-700 p-1 self-center rounded-full" />
+      ),
+    },
+
+    {
+      details: `know who we are and how we can help you `,
+      title: `About Us`,
+      logo: (
+        <FaPeopleGroup className="size-12 bg-blue-700 p-1 self-center rounded-full" />
+      ),
+    },
+
+    {
+      details: `upload card details and get unique card number
+        for each subscription or payment which 
+        changes after every hour 
+        to ensure your security 
+        also you can automate 
+        payment and notification is sent to 
+        user before subscrition is confirmed `,
+      title: `upload card details and get started`,
+      logo: (
+        <FaMoneyCheck className="size-12 bg-blue-700 p-1 self-center rounded-full" />
+      ),
+    },
+  ];
   return (
-    <div className="bg-green-950 rounded-t-3xl text-green-400 text-center font-bold pt-[30px] ">
+    <div className="bg-blue-950 rounded-t-3xl text-blue-300 text-center font-bold pt-[30px] ">
       <div>
         <h1 className=" ">why swift?</h1>
         <div className="text-[20px] text-white">
@@ -13,31 +71,46 @@ const HomeAbout = () => {
           you ever Know
         </div>
         <p className="text-gray-500 font-normal">
-          our online banking platform is user friendly and easy to navigate
+          our online platform is user friendly and easy to navigate
         </p>
       </div>
       <div className="sm:flex justify-around">
-        <AboutItem />
-        <AboutItem />
-        <AboutItem />
-        <AboutItem />
+        {aboutItemsDetails.map((elem, i) => {
+          return (
+            <AboutItem
+              key={i}
+              logo={elem.logo}
+              title={elem.title}
+              children={elem.details}
+            />
+          );
+        })}
       </div>
       <div className="bg-white text-left p-3 sm:grid grid-cols-2">
         <div className="">
           <div>
-            <h1 className="text-[30px] text-green-950">
-              Super convenient online banking
+            <h1 className="text-[30px] text-blue-950">
+              Super convenient online Subscription And Purchase Management
+              Center
             </h1>
             <p className="text-black">
-              You can view your accont balances, transaction history and
-              statements. <br /> aroundeven set up custom alerts to help you
-              stay on top of your finnces.
+              You can credit your account in swift,view transaction history and
+              statements. also enable direct subscriptions from your bank and
+              even set up custom alerts to help you stay on top of your
+              finances.
             </p>
           </div>
           <div>
-            <Tab />
-            <Tab />
-            <Tab />
+            {TabsDetails.map((elem, i) => {
+              return (
+                <Tab
+                  key={i}
+                  logo={elem.logo}
+                  title={elem.title}
+                  children={elem.details}
+                />
+              );
+            })}
           </div>
         </div>
         <div className="text-black">
@@ -49,30 +122,30 @@ const HomeAbout = () => {
                   <h1>Alex Turner</h1>
                   <p>Designer</p>
                 </div>
-                <p className="bg-green-300 text-xs self-center text-green-950 p-2 rounded-full">
+                <p className="bg-blue-300 text-xs self-center text-blue-950 p-2 rounded-full">
                   completed
                 </p>
               </div>
               <div className="flex justify-around text-xs px-11">
                 <div>
-                  <p className="font-normal">identity no</p>
-                  <h1>0013</h1>
+                  <p className="font-normal">company patronized</p>
+                  <h1>jumia</h1>
                 </div>
                 <div>
-                  <p className="font-normal">date of birth</p>
-                  <h1>0013</h1>
+                  <p className="font-normal">service purchased</p>
+                  <h1>head phone</h1>
                 </div>
                 <div>
                   <p className="font-normal">Amount</p>
-                  <h1>0013</h1>
+                  <h1>001</h1>
                 </div>
               </div>
             </div>
           </div>
-          <div className="rounded-lg bg-gradient-to-b from-green-900 to-green-500 p-4 text-white text-center">
-            <h1>You Recieved</h1>
-            <button className="bg-white text-green-900 p-2 px-3 rounded-full shadow-sm shadow-gray-600">
-              $1000.00
+          <div className="rounded-lg bg-gradient-to-b from-blue-900 to-blue-500 p-4 text-white text-center">
+            <h1>charges</h1>
+            <button className="bg-white text-blue-900 p-2 px-3 rounded-full shadow-sm shadow-gray-600">
+              $2000.00
             </button>
           </div>
         </div>
