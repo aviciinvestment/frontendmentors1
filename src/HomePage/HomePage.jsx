@@ -6,7 +6,7 @@ import HomeFooter from "./HomeFooter";
 
 const HomePage = () => {
   return (
-    <div className="font-sans bg-blue-900">
+    <div className="font-sans bg-blue-100">
       <HomeHeader />
       <HomeLanding />
       <HomeAbout />

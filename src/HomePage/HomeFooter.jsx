@@ -99,21 +99,21 @@ const HomeFooter = () => {
             hear from you
           </p>
           <div className="flex items-center gap-4 py-9">
-            <FaHeadphones className="bg-green-200 w-9 h-9 p-1 rounded-full" />
+            <FaHeadphones className="bg-blue-200 w-9 h-9 p-1 rounded-full" />
             <div>
               <p>call us for enquiry</p>
               <h1>+234(657)7477488</h1>
             </div>
           </div>
           <div className="flex items-center gap-4 py-9">
-            <FaVoicemail className="bg-green-200 w-9 h-9 p-1 rounded-full" />
+            <FaVoicemail className="bg-blue-200 w-9 h-9 p-1 rounded-full" />
             <div>
               <p>call us for enquiry</p>
               <h1>+234(657)7477488</h1>
             </div>
           </div>
           <div className="flex items-center gap-4 py-9">
-            <FaLocationCrosshairs className="bg-green-200 w-9 h-9 p-1 rounded-full" />
+            <FaLocationCrosshairs className="bg-blue-200 w-9 h-9 p-1 rounded-full" />
             <div>
               <p>call us for enquiry</p>
               <h1>+234(657)7477488</h1>
