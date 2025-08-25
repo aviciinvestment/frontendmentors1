@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaArrowUp,
   FaBusinessTime,
@@ -17,7 +18,7 @@ import {
 } from "react-icons/fa6";
 import ambassador2 from "../Assets/ambassador2.jpeg";
 
-const HomeFooter = () => {
+const HomeFooter = ({ handleTopScroll }) => {
   return (
     <div className="bg-white text-blue-950  h-52 px-2">
       {/*////////////////////////////////*/}
@@ -235,7 +236,10 @@ const HomeFooter = () => {
             </h1>
           </div>
         </div>
-        <div className="relative w-8 left-64 bottom-4 bg-blue-800 p-2 rounded-full ">
+        <div
+          onClick={handleTopScroll}
+          className="animate-bounce relative w-8 left-64 bottom-4 bg-blue-800 p-2 rounded-full "
+        >
           <FaArrowUp />
         </div>
       </div>

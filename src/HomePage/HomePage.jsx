@@ -6,15 +6,20 @@ import HomeFooter from "./HomeFooter";
 
 const HomePage = () => {
   const scrollRef = useRef(null);
+  const scrollTopRef = useRef(null);
+  const handleTopScroll = () => {
+    scrollTopRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   const handleScroll = () => {
     scrollRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div className="font-sans bg-blue-100">
-      <HomeHeader handleScroll={handleScroll} />
+      <HomeHeader handleScroll={handleScroll} scrollTopRef={scrollTopRef} />
       <HomeLanding />
       <HomeAbout scrollRef={scrollRef} />
-      <HomeFooter />
+      <HomeFooter handleTopScroll={handleTopScroll} />
     </div>
   );
 };

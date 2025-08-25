@@ -76,6 +76,8 @@ const HomeAbout = ({ scrollRef }) => {
       </div>
       <div className="sm:flex justify-around">
         {aboutItemsDetails.map((elem, i) => {
+          console.log(i);
+
           return (
             <AboutItem
               key={i}
