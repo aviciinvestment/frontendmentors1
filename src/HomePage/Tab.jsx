@@ -3,7 +3,7 @@ import { FaUser } from "react-icons/fa6";
 
 const Tab = ({ title, logo, children }) => {
   return (
-    <div className="text-black font-normal cursor-pointer p-2 border-l-2 border-blue-950 my-5 hover:bg-blue-100">
+    <div className="text-black font-normal cursor-pointer p-2 border-l-2 border-blue-950 my-5 hover:contrast-200 hover:opacity-60 hover:bg-blue-300">
       <div className="flex items-center gap-2">
         {logo}
         <h1 className="font-bold self-center">{title}</h1>

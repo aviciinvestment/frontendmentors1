@@ -21,7 +21,7 @@ const HomeFooter = () => {
   return (
     <div className="bg-white text-blue-950  h-52 px-2">
       {/*////////////////////////////////*/}
-      <div className="flex p-2 text-white sm:flex-row flex-col items-center sm:justify-between bg-blue-950 px-1 flex-wrap">
+      <div className="flex p-2 text-white sm:flex-row flex-col items-center sm:justify-between bg-gradient-to-t from-blue-950 contrast-200 to-blue-900  px-1 flex-wrap">
         <div className="self-center">
           Fast Transactions and returns every 24 hours
         </div>
@@ -84,8 +84,8 @@ const HomeFooter = () => {
         <img className="mix-blend-multiply" src={ambassador2} alt="img" />
         <div className="absolute text-center ">
           <h1 className="font-extrabold text-2xl">Contact Us</h1>
-          <p className="text-gray-300 text-xs underline underline-offset-2">
-            Swift
+          <p className="text-gray-300 text-xs cursor-pointer underline underline-offset-2">
+            <a href="#">PAYA</a>
           </p>
         </div>
       </div>

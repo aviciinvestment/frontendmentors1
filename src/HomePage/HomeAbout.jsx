@@ -8,7 +8,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { FaFileInvoice } from "react-icons/fa6";
 import { FaSubscript } from "react-icons/fa6";
 const project = "swift";
-const HomeAbout = () => {
+const HomeAbout = ({ scrollRef }) => {
   const TabsDetails = [
     {
       details: `in ${project} you can create an account and fund it, while we help with automated 
@@ -63,14 +63,14 @@ const HomeAbout = () => {
     },
   ];
   return (
-    <div className="bg-blue-950 rounded-t-3xl text-blue-300 text-center font-bold pt-[30px] ">
+    <div className="bg-blue-950 contrast-200 rounded-t-3xl text-blue-300 text-center font-bold pt-[30px] ">
       <div>
         <h1 className=" ">why swift?</h1>
         <div className="text-[20px] text-white">
           The Only FinTech App <br />
           you ever Know
         </div>
-        <p className="text-gray-500 font-normal">
+        <p className="text-gray-300 font-normal">
           our online platform is user friendly and easy to navigate
         </p>
       </div>
@@ -82,6 +82,7 @@ const HomeAbout = () => {
               logo={elem.logo}
               title={elem.title}
               children={elem.details}
+              scrollRef={scrollRef}
             />
           );
         })}
@@ -89,7 +90,7 @@ const HomeAbout = () => {
       <div className="bg-white text-left p-3 sm:grid grid-cols-2">
         <div className="">
           <div>
-            <h1 className="text-[30px] text-blue-950">
+            <h1 className="text-[30px] text-blue-950 leading-[35px]">
               Super convenient online Subscription And Purchase Management
               Center
             </h1>
@@ -122,7 +123,7 @@ const HomeAbout = () => {
                   <h1>Alex Turner</h1>
                   <p>Designer</p>
                 </div>
-                <p className="bg-blue-300 text-xs self-center text-blue-950 p-2 rounded-full">
+                <p className="text-white text-xs self-center bg-blue-950 p-2 rounded-full">
                   completed
                 </p>
               </div>
@@ -142,7 +143,7 @@ const HomeAbout = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-lg bg-gradient-to-b from-blue-900 to-blue-500 p-4 text-white text-center">
+          <div className="rounded-lg bg-gradient-to-b from-blue-950 contrast-200 to-blue-900 p-4 text-white text-center">
             <h1>charges</h1>
             <button className="bg-white text-blue-900 p-2 px-3 rounded-full shadow-sm shadow-gray-600">
               $2000.00

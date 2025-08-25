@@ -1,14 +1,15 @@
 import React from "react";
 
-const AboutItem = ({ key, logo, children, title }) => {
+const AboutItem = ({ key, logo, children, title, scrollRef }) => {
   return (
     <div
       key={`${key}`}
-      className="py-[50px] text-center flex flex-col items-center"
+      ref={scrollRef}
+      className="py-[50px] basis-[33.3%] text-center flex flex-col items-center"
     >
-      <div className="bg-blue-800 p-2 rounded-full w-[60px] flex">{logo}</div>
+      <div className="bg-blue-800 p-2 rounded-full flex">{logo}</div>
       <h1 className="text-white text-2xl">{title}</h1>
-      <p className="text-gray-400">{children}</p>
+      <p className="text-gray-300">{children}</p>
     </div>
   );
 };

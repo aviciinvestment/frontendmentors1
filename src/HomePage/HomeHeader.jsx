@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const HomeHeader = () => {
+const HomeHeader = ({ handleScroll }) => {
   const [openNav, setOpenNav] = useState(true);
   return (
     <>
       <div className="bg-blue-950 flex justify-between sm:justify-around text-white items-center">
         <div className="p-4   gap-2 flex">
-          <div className="w-5 border-2 border-white skew-x-12 bg-blue-950 h-5"></div>
+          <div className="w-5 border-4 border-white skew-x-12 bg-blue-950 h-5"></div>
           <div className=" border-[1px] border-white skew-x-12 bg-blue-950 h-5"></div>
           <div className="self-center text-gray-400 text-sm uppercase">
             Paya
@@ -23,7 +23,10 @@ const HomeHeader = () => {
             News
           </li>
         </ul>
-        <div className="cursor-pointer hover:bg-blue-100 text-sm bg-white text-green-950 p-2 mr-2 rounded-md font-bold">
+        <div
+          onClick={handleScroll}
+          className="cursor-pointer hover:bg-blue-100 text-sm bg-white text-green-950 p-2 mr-2 rounded-md font-bold"
+        >
           Get Started
         </div>
       </div>
@@ -42,9 +45,9 @@ const HomeHeader = () => {
               openNav ? "visible" : "hidden"
             } flex gap-2 flex-col mb-4 w-16`}
           >
-            <div className="bg-white h-[2px] w-[50%]"></div>
-            <div className="bg-white h-[2px] w-[50%]"></div>
-            <div className="bg-white h-[2px] w-[50%]"></div>
+            <div className="bg-white h-[3px] w-[50%]"></div>
+            <div className="bg-white h-[3px] w-[50%]"></div>
+            <div className="bg-white h-[3px] w-[50%]"></div>
           </div>
           <div
             className={`${

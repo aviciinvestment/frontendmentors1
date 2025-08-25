@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ambassador from "../Assets/ambassador.jpeg";
 import ambassador2 from "../Assets/ambassador2.jpeg";
 
 const HomeLanding = () => {
+  const [welcomeMessage, SetWelcomeMessage] = useState(true);
   return (
     <div>
       <div>
@@ -25,8 +26,19 @@ const HomeLanding = () => {
         <div className=" font-normal m-auto">
           <h1 className="sm:text-[40px] md:text-[60px] lg:text-[100px] font-extrabold text-red-950 text-[40px]">
             Smart And Simple
-            <div className="border-2 hover:rounded-md hover:bg-blue-100 cursor-pointer transition-all hover:border-l-2 border-l-[20px] hover:border-r-[20px] border-red-950 mx-9 flex flex-col items-center">
-              <div className="text-[20px]">Online service</div>
+            <div
+              onClick={() => {
+                SetWelcomeMessage(!welcomeMessage);
+              }}
+              className={`border-2 ${
+                welcomeMessage
+                  ? "border-l-[20px]"
+                  : "border-r-[20px] rounded-md bg-blue-100 border-l-2"
+              } cursor-pointer transition-all border-red-950  mx-9 flex flex-col items-center`}
+            >
+              <div className="text-[20px]">
+                {welcomeMessage ? "Welcome To Paya" : "Online service"}
+              </div>
             </div>
           </h1>
           <p className="text-gray-800 text-xl font-bold mx-9 my-4">
