@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomeHeader = ({ handleScroll, scrollTopRef }) => {
   const [openNav, setOpenNav] = useState(true);
@@ -16,9 +17,12 @@ const HomeHeader = ({ handleScroll, scrollTopRef }) => {
           </div>
         </div>
         <ul className="sm:flex uppercase hidden sm:visible text-2xl gap-10 ">
-          <li className="cursor-pointer rounded-lg transition-all hover:text-3xl hover:bg-blue-900 hover:p-3 hover:m-3">
-            Home
-          </li>
+          <Link to="/">
+            {" "}
+            <li className="cursor-pointer rounded-lg transition-all hover:text-3xl hover:bg-blue-900 hover:p-3 hover:m-3">
+              Home
+            </li>
+          </Link>
           <li className="cursor-pointer rounded-lg hover:text-3xl transition-all hover:bg-blue-900 hover:p-3 hover:m-3">
             Blog
           </li>
@@ -69,9 +73,12 @@ const HomeHeader = ({ handleScroll, scrollTopRef }) => {
         }  flex justify-center relative opacity-95 z-40 uppercase transition-all py-14  text-white text-center text-2xl gap-10 bg-blue-950`}
       >
         <ul className={`z-50 sm:hidden ${openNav ? "hidden" : "visible"}`}>
-          <li className="cursor-pointer rounded-lg transition-all hover:text-3xl hover:bg-blue-900 hover:p-3 hover:m-3">
-            Home
-          </li>
+          <Link to="/">
+            {" "}
+            <li className="cursor-pointer rounded-lg transition-all hover:text-3xl hover:bg-blue-900 hover:p-3 hover:m-3">
+              Home
+            </li>
+          </Link>
           <li className="cursor-pointer rounded-lg hover:text-3xl transition-all hover:bg-blue-900 hover:p-3 hover:m-3">
             Blog
           </li>
