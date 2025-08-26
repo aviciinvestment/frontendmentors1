@@ -7,9 +7,9 @@ const HomeHeader = ({ handleScroll, scrollTopRef }) => {
     <>
       <div
         ref={scrollTopRef}
-        className="bg-blue-950 flex justify-between sm:justify-around text-white items-center"
+        className="bg-blue-950 flex justify-between sm:justify-around text-gray-50 items-center"
       >
-        <div className="p-4   gap-2 flex">
+        <div className="p-4   gap-3 flex">
           <div className="w-5 border-4 border-white skew-x-12 bg-blue-950 h-5"></div>
           <div className=" border-[1px] border-white skew-x-12 bg-blue-950 h-5"></div>
           <div className="self-center text-gray-400 text-sm uppercase">
