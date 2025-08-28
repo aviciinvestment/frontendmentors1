@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage/HomePage";
-import SuccessPage from "./ServicePage/successPage";
+import SuccessPage from "./ServicePage/SuccessPage";
 import ServiceMain from "./ServicePage/ServiceMain";
 import RandomGenerator from "./ServicePage/RandomGenerator";
 const App = () => {
