@@ -14,7 +14,7 @@ import {
   RiSearch2Line,
 } from "react-icons/ri";
 
-const LandingPageSearch = () => {
+const LandingPageSearch = ({ SetWeatherApi }) => {
   const [eventOpen, SetEventOpen] = useState("DropDownClose");
   const [Search, SetSearch] = useState("searched");
   const [inputValue, SetInputValue] = useState("");
@@ -31,9 +31,11 @@ const LandingPageSearch = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     SetSearch("searching");
+    SetWeatherApi(FetchApi(input.value));
     FetchApi(input.value).then((response) => {
       console.log(response);
-      if (response.length > 0) {
+
+      if (response) {
         SetSearch("searched");
       }
     });

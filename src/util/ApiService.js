@@ -32,10 +32,10 @@ export async function FetchApi(city) {
     }
     const { latitude, longitude } = geoData.results[0];
     const weatherResponse = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m,precipitation,relative_humidity_2m,wind_speed_10m,weather_code&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation&past_days=7`
     );
     const weatherData = await weatherResponse.json();
-    return weatherData.hourly.temperature_2m;
+    return weatherData;
   } catch (error) {
     console.error("Error fetching data:", error);
   }

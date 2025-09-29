@@ -1,6 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import sunny from "../assets/images/icon-sunny.webp";
-const LandingComponent1 = () => {
+
+const LandingComponent1 = ({ weatherApi }) => {
+  const [temperature, setTemperature] = useState("");
+  console.log(weatherApi);
+
+  weatherApi.then((Response) => {
+    setTemperature(Response.current.temperature_2m);
+  });
   return (
     <div
       className="bg-[url('./assets/images/bg-today-small.svg')] sm:bg-[url('./assets/images/bg-today-large.svg')] bg-no-repeat items-center contrast-50 brightness-95
@@ -13,7 +20,8 @@ const LandingComponent1 = () => {
       <div className="flex items-center ">
         <img className="size-32" src={sunny} alt="" />
         <div className="text-8xl font-DMSans font-medium">
-          20<sup>o</sup>
+          {temperature}
+          <sup>o</sup>
         </div>
       </div>
     </div>
