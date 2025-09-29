@@ -1,8 +1,16 @@
 import React from "react";
+import { searchLocations } from "@/util/ApiService";
 
-const SearchedCountry = ["City Name", "City Name", "City Name", "City Name"];
+let SearchedCountry = [];
 
-const SearchDropDown = ({ SetEventOpen, InputValueOnClick }) => {
+const SearchDropDown = ({ SetEventOpen, InputValueOnClick, inputValue }) => {
+  searchLocations(inputValue).then((locations) => {
+    SearchedCountry = [];
+    locations.forEach((element) => {
+      SearchedCountry.push(element.name);
+    });
+  });
+  console.log(SearchedCountry);
   return (
     <div className="cursor-pointer">
       {SearchedCountry.map((elem, i) => (

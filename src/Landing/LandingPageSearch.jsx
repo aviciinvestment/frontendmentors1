@@ -16,19 +16,35 @@ import {
 
 const LandingPageSearch = () => {
   const [eventOpen, SetEventOpen] = useState("DropDownClose");
-  const [Search, SetSearch] = useState("");
-
+  const [Search, SetSearch] = useState("searched");
+  const [inputValue, SetInputValue] = useState("");
+  const input = document.getElementById("input");
   const DropDownActive = (condition) => {
     SetEventOpen(condition);
   };
 
   const InputValueOnClick = (value) => {
-    const input = document.getElementById("input");
     input.value = value;
   };
 
+  //////////////////////
+  const onSubmit = (e) => {
+    e.preventDefault();
+    SetSearch("searching");
+    FetchApi(input.value).then((response) => {
+      console.log(response);
+      if (response.length > 0) {
+        SetSearch("searched");
+      }
+    });
+
+    DropDownActive("DropDownClose");
+  };
+
+  /////////////////
   useEffect(() => {
-    FetchApi("Abuja");
+    if (inputValue == "") return;
+    FetchApi(inputValue);
   });
   return (
     <div className=" mx-auto">
@@ -38,30 +54,29 @@ const LandingPageSearch = () => {
             <img className="size-5" src={search} alt="" />
           </div>
           <input
+            onChange={(e) => {
+              SetInputValue(e.target.value);
+              DropDownActive("DropDownOpen");
+            }}
             id="input"
-            onChange={() => DropDownActive("DropDownOpen")}
             //onMouseLeave={() => DropDownActive("DropDownClose")}
             placeholder="Search for a place..."
             className="outline-none sm:min-w-[656px] w-full  text-2xl border-none rounded-r-xl items-center px-6 py-4 bg-gray-500 contrast-75 brightness-75 "
           />
         </div>
-        <div
-          onClick={() => {
-            SetSearch("searching");
-          }}
-          className="relative flex-shrink-0 "
-        >
-          <Buttons>Search</Buttons>
+        <div className="relative flex-shrink-0 ">
+          <Buttons onSubmit={onSubmit}>Search</Buttons>
         </div>
       </div>
       <div
         className={`${
           eventOpen == "DropDownOpen" ? "visible" : "invisible"
-        } sm:min-w-[696px] text-left brightness-100 absolute cursor-pointer rounded-xl p-2 z-50 bg-gray-600 top-[230px]`}
+        } sm:min-w-[696px] text-left brightness-100 absolute cursor-pointer rounded-xl p-2 z-50 bg-gray-600 top-[270px]`}
       >
         <SearchDropDown
           SetEventOpen={SetEventOpen}
           InputValueOnClick={InputValueOnClick}
+          inputValue={inputValue}
         />
       </div>
       <div
