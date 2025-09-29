@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        DMSans: ["DMSans", "sans-serif"],
+        Bricolage_Grotesque: ["Bricolage_Grotesque", "sans-serif"],
+      },
       keyframes: {
         fadeIn: {
           "0%": {

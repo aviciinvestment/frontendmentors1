@@ -2,12 +2,12 @@ import React from "react";
 
 const DailyForcast = ({ icon, temp1, temp2, days }) => {
   return (
-    <div className="flex flex-col justify-center bg-gray-500 contrast-100  brightness-75  rounded-xl m-2 w-[27%] sm:w-[12%] p-2">
-      <div className="text-gray-300">{days}</div>
+    <div className="flex flex-col justify-center bg-gray-500 contrast-100  brightness-75  rounded-xl min-w-32 flex-grow max-w-40 w-auto p-3">
+      <div className="text-white text-lg">{days}</div>
       <div className="self-center">
         <img className="size-16" src={icon} alt="" />
       </div>
-      <div className="text-sm text-gray-300 flex justify-between">
+      <div className="text-lg text-white flex justify-between">
         <div>
           {temp1}
           <sup>o</sup>

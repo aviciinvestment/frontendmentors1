@@ -6,14 +6,20 @@ import LandingComponent4HourlyForcast from "./LandingComponent4HourlyForcast";
 
 const LandingPageBodyComponent = () => {
   return (
-    <div className="sm:flex items-center w-full justify-between px-2 sm:px-7">
-      <div className="w-full basis-[70%]  flex flex-col  justify-center">
-        <LandingComponent1 />
-        <LandingComponent2WeatherCondition />
-        <LandingPage3Forcast />
+    <main>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 pt-[48px] md:grid-cols-3 gap-8">
+          <div className="col-span-2">
+            <LandingComponent1 />
+            <LandingComponent2WeatherCondition />
+            <LandingPage3Forcast />
+          </div>
+          <div className="col-span-1 ">
+            <LandingComponent4HourlyForcast />
+          </div>
+        </div>
       </div>
-      <LandingComponent4HourlyForcast />
-    </div>
+    </main>
   );
 };
 

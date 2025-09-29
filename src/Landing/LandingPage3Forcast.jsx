@@ -10,14 +10,14 @@ import fog from "../assets/images/icon-fog.webp";
 
 const LandingPage3Forcast = () => {
   return (
-    <div>
-      <div className="text-left m-5">Daily Forcast</div>
-      <div className="flex flex-wrap justify-between px-4">
-        <DailyForcast days={"Tue"} icon={rainy} temp1={"20"} temp2={"14"} />
-        <DailyForcast days={"Wed"} icon={drizzle} temp1={"21"} temp2={"15"} />
+    <div className="flex flex-col gap-5">
+      <div className="text-left text-xl">Daily Forcast</div>
+      <div className="flex justify-start gap-4 flex-wrap  w-full">
+        <DailyForcast days={"Tue"} icon={rainy} temp1={20} temp2={"14"} />
+        <DailyForcast days={"Wed"} icon={drizzle} temp1={21} temp2={15} />
         <DailyForcast days={"Thu"} icon={sunny} temp1={"24"} temp2={"14"} />
         <DailyForcast days={"Fri"} icon={pcloudy} temp1={"25"} temp2={"13"} />
-        <DailyForcast days={"Sat"} icon={storm} temp1={"21"} temp2={"15"} />
+        <DailyForcast days={"Sat"} icon={storm} temp1={21} temp2={15} />
         <DailyForcast days={"Sun"} icon={snow} temp1={"25"} temp2={"16"} />
         <DailyForcast days={"Mon"} icon={fog} temp1={"24"} temp2={"15"} />
       </div>
