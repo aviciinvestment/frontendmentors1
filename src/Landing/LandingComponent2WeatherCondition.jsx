@@ -9,25 +9,36 @@ const LandingComponent2WeatherCondition = ({ weatherApi }) => {
       SetweatherData(Response);
     });
   }, [weatherApi]);
-  console.log(weatherData);
 
   return (
     <div className="grid sm:grid-cols-4 mt-8 mb-12 grid-cols-2 gap-[24px]">
       <Weathercondition
         condition={"Feels Like"}
-        value={weatherData?.current.temperature_2m + "°"}
+        value={
+          weatherData?.current.temperature_2m +
+          weatherData?.current_units.temperature_2m
+        }
       />
       <Weathercondition
         condition={"Humidity"}
-        value={weatherData?.current.relative_humidity_2m + "%"}
+        value={
+          weatherData?.current.relative_humidity_2m +
+          weatherData?.current_units.relative_humidity_2m
+        }
       />
       <Weathercondition
         condition={"Wind"}
-        value={weatherData?.current.wind_speed_10m + "km/h"}
+        value={
+          weatherData?.current.wind_speed_10m +
+          weatherData?.current_units.wind_speed_10m
+        }
       />
       <Weathercondition
         condition={"precipitation"}
-        value={weatherData?.current.precipitation + " mm"}
+        value={
+          weatherData?.current.precipitation +
+          weatherData?.current_units.precipitation
+        }
       />
     </div>
   );

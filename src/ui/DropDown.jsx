@@ -1,4 +1,6 @@
-const DropDown = ({ children }) => {
+const DropDown = ({ children, SetSelectedDay }) => {
+  const selectDay = document.getElementById("selectDay");
+
   return (
     <div className="flex ">
       <div className="flex rounded-l-md items-center bg-gray-500 contrast-75 brightness-75 "></div>
@@ -7,7 +9,10 @@ const DropDown = ({ children }) => {
          text-white py-2 px-2 rounded-md outline-none border-none
           hover:ring-1 ring-white text-base"
         name=""
-        id=""
+        id="selectDay"
+        onChange={() => {
+          SetSelectedDay(selectDay.value);
+        }}
       >
         {children}
       </select>

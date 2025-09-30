@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import sunny from "../assets/images/icon-sunny.webp";
 import dateTimeEditor from "@/util/DateTimeEditor";
 const LandingComponent1 = ({ weatherApi, landingCountry }) => {
   const [temperature, setTemperature] = useState("");
   const [date, setDate] = useState("");
-  console.log(weatherApi);
-  console.log(landingCountry);
 
-  weatherApi.then((Response) => {
-    setTemperature(Response.current.temperature_2m);
-    setDate(Response.current.time);
-  });
+  useEffect(() => {
+    weatherApi.then((Response) => {
+      setTemperature(Response.current.temperature_2m);
+      setDate(Response.current.time);
+    });
+  }, [weatherApi]);
 
   return (
     <div

@@ -38,8 +38,6 @@ const LandingPageSearch = ({
     SetSearch("searching");
     SetWeatherApi(FetchApi(input.value));
     FetchApi(input.value).then((response) => {
-      console.log(response);
-
       if (response) {
         SetSearch("searched");
         SetlandingCountry(input.value);

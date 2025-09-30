@@ -10,7 +10,7 @@ const SearchDropDown = ({ SetEventOpen, InputValueOnClick, inputValue }) => {
       SearchedCountry.push(element.name);
     });
   });
-  console.log(SearchedCountry);
+
   return (
     <div className="cursor-pointer">
       {SearchedCountry.map((elem, i) => (

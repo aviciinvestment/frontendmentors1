@@ -15,10 +15,10 @@ const LandingPageBodyComponent = ({ weatherApi, landingCountry }) => {
               landingCountry={landingCountry}
             />
             <LandingComponent2WeatherCondition weatherApi={weatherApi} />
-            <LandingPage3Forcast />
+            <LandingPage3Forcast weatherApi={weatherApi} />
           </div>
           <div className="col-span-1 ">
-            <LandingComponent4HourlyForcast />
+            <LandingComponent4HourlyForcast weatherApi={weatherApi} />
           </div>
         </div>
       </div>
