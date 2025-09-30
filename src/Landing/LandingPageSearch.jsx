@@ -19,9 +19,11 @@ const LandingPageSearch = ({
   inputValue,
   SetInputValue,
   SetlandingCountry,
+  unit,
+  Search,
+  SetSearch,
 }) => {
   const [eventOpen, SetEventOpen] = useState("DropDownClose");
-  const [Search, SetSearch] = useState("searched");
 
   const input = document.getElementById("input");
   const DropDownActive = (condition) => {
@@ -36,8 +38,8 @@ const LandingPageSearch = ({
   const onSubmit = (e) => {
     e.preventDefault();
     SetSearch("searching");
-    SetWeatherApi(FetchApi(input.value));
-    FetchApi(input.value).then((response) => {
+    SetWeatherApi(FetchApi(input.value, unit));
+    FetchApi(input.value, unit).then((response) => {
       if (response) {
         SetSearch("searched");
         SetlandingCountry(input.value);
@@ -51,7 +53,7 @@ const LandingPageSearch = ({
   /////////////////
   useEffect(() => {
     if (inputValue == "") return;
-    FetchApi(inputValue);
+    FetchApi(inputValue, unit);
   });
   return (
     <div className=" mx-auto">

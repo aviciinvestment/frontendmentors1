@@ -20,7 +20,7 @@ export async function searchLocations(query) {
   }
 }
 
-export async function FetchApi(city) {
+export async function FetchApi(city, unit) {
   try {
     const geoResponse = await fetch(
       `https://geocoding-api.open-meteo.com/v1/search?name=${city}`
@@ -32,9 +32,14 @@ export async function FetchApi(city) {
     }
     const { latitude, longitude } = geoData.results[0];
     const weatherResponse = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation,relative_humidity_2m,wind_speed_10m,weather_code&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code&past_days=7`
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code&hourly=temperature_2m,precipitation,relative_humidity_2m,wind_speed_10m,weather_code&current=temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation,weather_code&past_days=7&${
+        unit == "metric"
+          ? "wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch"
+          : ""
+      }`
     );
     const weatherData = await weatherResponse.json();
+    console.log(unit);
     return weatherData;
   } catch (error) {
     console.error("Error fetching data:", error);

@@ -7,7 +7,16 @@ import {
   RiHomeGearFill,
 } from "react-icons/ri";
 import HeaderDropdow from "./HeaderDropdow";
-const Header = () => {
+
+const Header = ({
+  unit,
+  Setunit,
+  SetSearch,
+  weatherApi,
+  SetWeatherApi,
+  landingCountry,
+  SetlandingCountry,
+}) => {
   const [toggleDropDown, SettoggleDropDown] = useState(false);
   return (
     <div className="flex items-center justify-between mx-4 sm:mx-20">
@@ -36,7 +45,16 @@ const Header = () => {
           toggleDropDown ? "visible" : "invisible"
         } top-[70px] right-[45px] `}
       >
-        <HeaderDropdow />
+        <HeaderDropdow
+          unit={unit}
+          Setunit={Setunit}
+          SetSearch={SetSearch}
+          SetWeatherApi={SetWeatherApi}
+          weatherApi={weatherApi}
+          landingCountry={landingCountry}
+          SetlandingCountry={SetlandingCountry}
+          SettoggleDropDown={SettoggleDropDown}
+        />
       </div>
     </div>
   );

@@ -4,11 +4,14 @@ import dateTimeEditor from "@/util/DateTimeEditor";
 const LandingComponent1 = ({ weatherApi, landingCountry }) => {
   const [temperature, setTemperature] = useState("");
   const [date, setDate] = useState("");
+  const [setunit, setSetunit] = useState("°C");
 
   useEffect(() => {
     weatherApi.then((Response) => {
-      setTemperature(Response.current.temperature_2m);
-      setDate(Response.current.time);
+      setTemperature(Response?.current.temperature_2m);
+      setDate(Response?.current.time);
+      setSetunit(Response?.current_units.temperature_2m);
+      console.log(Response);
     });
   }, [weatherApi]);
 
@@ -27,7 +30,7 @@ const LandingComponent1 = ({ weatherApi, landingCountry }) => {
         <img className="size-32" src={sunny} alt="" />
         <div className="text-6xl sm:text-8xl font-DMSans font-medium">
           {temperature}
-          <sup>o</sup>
+          {setunit}
         </div>
       </div>
     </div>

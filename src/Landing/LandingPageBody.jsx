@@ -3,9 +3,16 @@ import LandingPageSearch from "./LandingPageSearch";
 import LandingPageBodyComponent from "./LandingPageBodyComponent";
 import LandingLoadState from "@/ui/LandingLoadState";
 
-const LandingPageBody = ({ weatherApi, SetWeatherApi }) => {
+const LandingPageBody = ({
+  weatherApi,
+  SetWeatherApi,
+  unit,
+  Search,
+  SetSearch,
+  landingCountry,
+  SetlandingCountry,
+}) => {
   const [inputValue, SetInputValue] = useState("");
-  const [landingCountry, SetlandingCountry] = useState("");
 
   return (
     <div className="flex text-center flex-col gap-12 text-white">
@@ -13,9 +20,12 @@ const LandingPageBody = ({ weatherApi, SetWeatherApi }) => {
         How's the sky looking today?
       </div>
       <LandingPageSearch
+        Search={Search}
+        SetSearch={SetSearch}
         inputValue={inputValue}
         SetInputValue={SetInputValue}
         SetWeatherApi={SetWeatherApi}
+        unit={unit}
         SetlandingCountry={SetlandingCountry}
       />
       {
