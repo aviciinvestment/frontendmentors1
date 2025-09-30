@@ -16,9 +16,9 @@ const LandingPage3Forcast = ({ weatherApi }) => {
       SetweatherData(Response);
     });
   }, [weatherApi]);
-  const TemperatureMax = weatherData?.daily.temperature_2m_max.slice(7, 14);
-  const TemperatureMin = weatherData?.daily.temperature_2m_min.slice(7, 14);
-  const TemperatureTime = weatherData?.daily.time.slice(7, 14);
+  const TemperatureMax = weatherData?.daily?.temperature_2m_max?.slice(7, 14);
+  const TemperatureMin = weatherData?.daily?.temperature_2m_min?.slice(7, 14);
+  const TemperatureTime = weatherData?.daily?.time?.slice(7, 14);
   const WeatherIcon = [rainy, drizzle, sunny, pcloudy, storm, snow, fog];
 
   return (
@@ -32,9 +32,9 @@ const LandingPage3Forcast = ({ weatherApi }) => {
             icon={WeatherIcon[index]}
             temp1={
               TemperatureMin[index] +
-              weatherData?.daily_units.temperature_2m_min
+              weatherData?.daily_units?.temperature_2m_min
             }
-            temp2={item + weatherData?.daily_units.temperature_2m_min}
+            temp2={item + weatherData?.daily_units?.temperature_2m_min}
           />
         ))}
       </div>

@@ -13,6 +13,7 @@ const HeaderDropdow = ({
   unit,
   SetlandingCountry,
   SettoggleDropDown,
+  apiState,
 }) => {
   const [SwitchCondition, SetSwitchCondition] = useState("imperial");
   useEffect(() => {
@@ -20,11 +21,16 @@ const HeaderDropdow = ({
   }, [Setunit, SwitchCondition]);
 
   return (
-    <div className="min-w-[214px] cursor-pointer bg-gray-500 px-[8px] py-[6px] rounded-[12px] border-[1px] border-gray-400 contrast-100  brightness-75">
+    <div
+      className={`min-w-[214px] ${
+        apiState ? "" : "hidden"
+      }  cursor-pointer bg-gray-500 px-[8px] py-[6px] rounded-[12px] border-[1px] border-gray-400 contrast-100  brightness-75`}
+    >
       <button
         onClick={() => {
           SetlandingCountry("Abuja");
           SetWeatherApi(FetchApi("Abuja", unit));
+
           if (SwitchCondition == "imperial") {
             SetSwitchCondition("metric");
           } else {

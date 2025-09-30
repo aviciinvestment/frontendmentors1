@@ -7,7 +7,7 @@ import {
 
 const LandingError = () => {
   return (
-    <div className="flex flex-col gap-6 items-center">
+    <div className="text-center flex flex-col gap-6 items-center">
       <div>
         <RiProhibitedLine className="text-gray-300 size-12" />
       </div>
@@ -20,7 +20,12 @@ const LandingError = () => {
           again in a few minute.{" "}
         </p>
       </div>
-      <div className="cursor-pointer text-white font-light px-4 py-3 gap-3 rounded-lg bg-gray-600 flex items-center ">
+      <div
+        onClick={() => {
+          location.reload();
+        }}
+        className="cursor-pointer text-white font-light px-4 py-3 gap-3 rounded-lg bg-gray-600 hover:bg-gray-500 flex items-center "
+      >
         <RiRefreshLine className="size-4 " />
         <div>Retry</div>
       </div>

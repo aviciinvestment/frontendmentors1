@@ -3,6 +3,7 @@ import LandingPageSearch from "./LandingPageSearch";
 import LandingPageBodyComponent from "./LandingPageBodyComponent";
 import LandingLoadState from "@/ui/LandingLoadState";
 
+import { FetchApi } from "@/util/ApiService";
 const LandingPageBody = ({
   weatherApi,
   SetWeatherApi,
@@ -13,6 +14,7 @@ const LandingPageBody = ({
   SetlandingCountry,
 }) => {
   const [inputValue, SetInputValue] = useState("");
+  const [SearchedThrough, SetSearchedThrough] = useState(true);
 
   return (
     <div className="flex text-center flex-col gap-12 text-white">
@@ -27,16 +29,22 @@ const LandingPageBody = ({
         SetWeatherApi={SetWeatherApi}
         unit={unit}
         SetlandingCountry={SetlandingCountry}
+        SetSearchedThrough={SetSearchedThrough}
       />
-      {
-        <LandingPageBodyComponent
-          weatherApi={weatherApi}
-          landingCountry={landingCountry}
-        />
-      }
-      {/* {<div className="text-white font-DMSans font-medium text-2xl">
-        No search result found!
-      </div>} */}{" "}
+      {SearchedThrough ? (
+        Search == "searching" ? (
+          <LandingLoadState />
+        ) : (
+          <LandingPageBodyComponent
+            weatherApi={weatherApi}
+            landingCountry={landingCountry}
+          />
+        )
+      ) : (
+        <div className="text-white font-DMSans font-medium text-2xl">
+          No search result found!
+        </div>
+      )}
       {/* { <LandingLoadState />} */}
     </div>
   );

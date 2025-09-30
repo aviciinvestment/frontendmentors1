@@ -16,13 +16,13 @@ const LandingComponent4HourlyForcast = ({ weatherApi }) => {
     });
   }, [weatherApi]);
   // each temperature represents the temperature of each day
-  const Temperature8 = weatherData?.hourly.temperature_2m.slice(168, 192);
-  const Temperature9 = weatherData?.hourly.temperature_2m.slice(192, 216);
-  const Temperature10 = weatherData?.hourly.temperature_2m.slice(216, 240);
-  const Temperature11 = weatherData?.hourly.temperature_2m.slice(240, 264);
-  const Temperature12 = weatherData?.hourly.temperature_2m.slice(264, 288);
-  const Temperature13 = weatherData?.hourly.temperature_2m.slice(288, 312);
-  const Temperature14 = weatherData?.hourly.temperature_2m.slice(312, 336);
+  const Temperature8 = weatherData?.hourly?.temperature_2m?.slice(168, 192);
+  const Temperature9 = weatherData?.hourly?.temperature_2m?.slice(192, 216);
+  const Temperature10 = weatherData?.hourly?.temperature_2m?.slice(216, 240);
+  const Temperature11 = weatherData?.hourly?.temperature_2m?.slice(240, 264);
+  const Temperature12 = weatherData?.hourly?.temperature_2m?.slice(264, 288);
+  const Temperature13 = weatherData?.hourly?.temperature_2m?.slice(288, 312);
+  const Temperature14 = weatherData?.hourly?.temperature_2m?.slice(312, 336);
   //to change different days
   const Temperature = [
     Temperature8,
@@ -33,7 +33,7 @@ const LandingComponent4HourlyForcast = ({ weatherApi }) => {
     Temperature13,
     Temperature14,
   ];
-  const TemperatureTime = weatherData?.hourly.time.slice(0, 24);
+  const TemperatureTime = weatherData?.hourly?.time?.slice(0, 24);
   const WeatherIcon = [
     sunny,
     pcloudy,

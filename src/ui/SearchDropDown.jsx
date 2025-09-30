@@ -6,9 +6,13 @@ let SearchedCountry = [];
 const SearchDropDown = ({ SetEventOpen, InputValueOnClick, inputValue }) => {
   searchLocations(inputValue).then((locations) => {
     SearchedCountry = [];
-    locations.forEach((element) => {
-      SearchedCountry.push(element.name);
-    });
+    if (locations?.length > 0) {
+      locations?.forEach((element) => {
+        SearchedCountry.push(element.name);
+      });
+    } else {
+      SearchedCountry.push("No Results Found");
+    }
   });
 
   return (

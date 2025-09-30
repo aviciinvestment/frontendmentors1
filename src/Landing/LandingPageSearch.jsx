@@ -22,6 +22,7 @@ const LandingPageSearch = ({
   unit,
   Search,
   SetSearch,
+  SetSearchedThrough,
 }) => {
   const [eventOpen, SetEventOpen] = useState("DropDownClose");
 
@@ -33,7 +34,7 @@ const LandingPageSearch = ({
   const InputValueOnClick = (value) => {
     input.value = value;
   };
-
+  //////////////////////////
   //////////////////////
   const onSubmit = (e) => {
     e.preventDefault();
@@ -48,6 +49,13 @@ const LandingPageSearch = ({
     });
 
     DropDownActive("DropDownClose");
+    FetchApi(input.value, unit).then((response) => {
+      if (response == "not found") {
+        SetSearchedThrough(false);
+      } else {
+        SetSearchedThrough(true);
+      }
+    });
   };
 
   /////////////////
@@ -86,6 +94,7 @@ const LandingPageSearch = ({
           SetEventOpen={SetEventOpen}
           InputValueOnClick={InputValueOnClick}
           inputValue={inputValue}
+          unit={unit}
         />
       </div>
       <div

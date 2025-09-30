@@ -5,7 +5,6 @@ export async function searchLocations(query) {
     );
     const data = await response.json();
     if (!data.results) {
-      console.log("No Location Found");
       return [];
     }
     return data.results.map((location) => ({
@@ -15,8 +14,8 @@ export async function searchLocations(query) {
       longitude: location.longitude,
     }));
   } catch (error) {
-    console.error("Error fetching Location data:", error);
-    return [];
+    //console.error("Error fetching Location data:", error);
+    return "error";
   }
 }
 
@@ -27,8 +26,7 @@ export async function FetchApi(city, unit) {
     );
     const geoData = await geoResponse.json();
     if (!geoData.results || geoData.results.length === 0) {
-      console.log("City not found");
-      return;
+      return "not found";
     }
     const { latitude, longitude } = geoData.results[0];
     const weatherResponse = await fetch(
@@ -39,9 +37,9 @@ export async function FetchApi(city, unit) {
       }`
     );
     const weatherData = await weatherResponse.json();
-    console.log(unit);
+
     return weatherData;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    return "error";
   }
 }

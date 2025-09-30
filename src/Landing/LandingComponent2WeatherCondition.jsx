@@ -15,29 +15,29 @@ const LandingComponent2WeatherCondition = ({ weatherApi }) => {
       <Weathercondition
         condition={"Feels Like"}
         value={
-          weatherData?.current.temperature_2m +
-          weatherData?.current_units.temperature_2m
+          weatherData?.current?.temperature_2m +
+          weatherData?.current_units?.temperature_2m
         }
       />
       <Weathercondition
         condition={"Humidity"}
         value={
-          weatherData?.current.relative_humidity_2m +
-          weatherData?.current_units.relative_humidity_2m
+          weatherData?.current?.relative_humidity_2m +
+          weatherData?.current_units?.relative_humidity_2m
         }
       />
       <Weathercondition
         condition={"Wind"}
         value={
-          weatherData?.current.wind_speed_10m +
-          weatherData?.current_units.wind_speed_10m
+          weatherData?.current?.wind_speed_10m +
+          weatherData?.current_units?.wind_speed_10m
         }
       />
       <Weathercondition
         condition={"precipitation"}
         value={
-          weatherData?.current.precipitation +
-          weatherData?.current_units.precipitation
+          weatherData?.current?.precipitation +
+          weatherData?.current_units?.precipitation
         }
       />
     </div>

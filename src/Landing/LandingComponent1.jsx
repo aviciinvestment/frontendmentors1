@@ -8,10 +8,9 @@ const LandingComponent1 = ({ weatherApi, landingCountry }) => {
 
   useEffect(() => {
     weatherApi.then((Response) => {
-      setTemperature(Response?.current.temperature_2m);
-      setDate(Response?.current.time);
-      setSetunit(Response?.current_units.temperature_2m);
-      console.log(Response);
+      setTemperature(Response?.current?.temperature_2m);
+      setDate(Response?.current?.time);
+      setSetunit(Response?.current_units?.temperature_2m);
     });
   }, [weatherApi]);
 

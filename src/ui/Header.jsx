@@ -16,6 +16,7 @@ const Header = ({
   SetWeatherApi,
   landingCountry,
   SetlandingCountry,
+  apiState,
 }) => {
   const [toggleDropDown, SettoggleDropDown] = useState(false);
   return (
@@ -54,6 +55,7 @@ const Header = ({
           landingCountry={landingCountry}
           SetlandingCountry={SetlandingCountry}
           SettoggleDropDown={SettoggleDropDown}
+          apiState={apiState}
         />
       </div>
     </div>
