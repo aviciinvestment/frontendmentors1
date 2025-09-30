@@ -14,10 +14,15 @@ import {
   RiSearch2Line,
 } from "react-icons/ri";
 
-const LandingPageSearch = ({ SetWeatherApi }) => {
+const LandingPageSearch = ({
+  SetWeatherApi,
+  inputValue,
+  SetInputValue,
+  SetlandingCountry,
+}) => {
   const [eventOpen, SetEventOpen] = useState("DropDownClose");
   const [Search, SetSearch] = useState("searched");
-  const [inputValue, SetInputValue] = useState("");
+
   const input = document.getElementById("input");
   const DropDownActive = (condition) => {
     SetEventOpen(condition);
@@ -37,6 +42,8 @@ const LandingPageSearch = ({ SetWeatherApi }) => {
 
       if (response) {
         SetSearch("searched");
+        SetlandingCountry(input.value);
+        input.value = "";
       }
     });
 
