@@ -7,7 +7,7 @@ import LandingComponent4HourlyForcast from "./LandingComponent4HourlyForcast";
 const LandingPageBodyComponent = ({ weatherApi, landingCountry }) => {
   return (
     <main>
-      <div className="container mx-auto ">
+      <div className="w-full container mx-auto ">
         <div className="flex flex-col md:flex-row justify-center  md:gap-12 gap-8">
           <div className="flex flex-col justify-start  md:gap-12 gap-8">
             <div className="flex flex-col  justify-center  md:gap-8 gap-4">

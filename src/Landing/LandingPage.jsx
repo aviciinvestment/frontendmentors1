@@ -8,10 +8,18 @@ import { searchLocations } from "@/util/ApiService";
 const LandingPage = () => {
   const [unit, Setunit] = useState("metric");
   const [weatherApi, SetWeatherApi] = useState(FetchApi("Abuja", unit));
-  const [Search, SetSearch] = useState("searched");
+  const [Search, SetSearch] = useState("searching");
   const [landingCountry, SetlandingCountry] = useState("");
   const [error, Seterror] = useState(null);
   const [apiState, SetApiState] = useState(true);
+  window.onload = function () {
+    // Your function call or code here
+    myFunction();
+  };
+
+  function myFunction() {
+    SetSearch("searched");
+  }
 
   useEffect(() => {
     weatherApi.then((response) => {

@@ -100,7 +100,7 @@ const LandingPageSearch = ({
       <div
         className={`${
           Search == "searching" ? "visible" : "invisible"
-        } mt-2 md:w-1/3 sm:w-10/12 w-11/12 mx-auto  flex gap-1 items-center text-lg px-2 py-3 rounded-lg  text-left brightness-100 absolute cursor-pointer p-2 z-50 bg-gray-600 `}
+        } mt-2 md:w-1/3 sm:w-10/12 w-11/12 mx-auto  flex gap-1 items-center  right-0 left-0  text-lg px-2 py-3 rounded-lg  text-left brightness-100 absolute cursor-pointer p-2 z-50 bg-gray-600 `}
       >
         <RiLoader2Line className="animate-spin size-5" />
         Search In Progress
