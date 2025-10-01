@@ -23,7 +23,7 @@ const Header = ({
     <div>
       <div className="flex items-center justify-between ">
         <div>
-          <img className="size-44" src={logo} alt="" />
+          <img className="sm:size-44 size-32" src={logo} alt="" />
         </div>
         <div
           onClick={() => {
