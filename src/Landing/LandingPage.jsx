@@ -32,7 +32,7 @@ const LandingPage = () => {
   }, [weatherApi]);
 
   return (
-    <div className=" m-auto w-full md:pl-28 md:pr-28 sm:pr-6 sm:pl-6 pl-4 pr-4 bg-blue-950 min-h-screen brightness-105 contrast-200">
+    <div className="pb-9 m-auto w-full md:pl-28 md:pr-28 sm:pr-6 sm:pl-6 pl-4 pr-4 bg-blue-950 min-h-screen brightness-105 contrast-200">
       <div className="font-DMSans">
         <Header
           weatherApi={weatherApi}

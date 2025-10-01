@@ -78,7 +78,7 @@ const LandingPageSearch = ({
             id="input"
             //onMouseLeave={() => DropDownActive("DropDownClose")}
             placeholder="Search for a place..."
-            className="outline-none  w-full md:w-auto  text-2xl border-none rounded-r-xl items-center px-6 py-4 bg-gray-500 contrast-75 brightness-75 "
+            className="outline-none  w-full md:w-auto  text-2xl border-none rounded-r-xl items-center px-1 py-4 bg-gray-500 contrast-75 brightness-75 "
           />
         </div>
         <div className="">
