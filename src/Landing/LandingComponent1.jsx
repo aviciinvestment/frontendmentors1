@@ -27,7 +27,7 @@ const LandingComponent1 = ({ weatherApi, landingCountry }) => {
       </div>
       <div className="flex items-center ">
         <img className="size-32" src={sunny} alt="" />
-        <div className="text-6xl sm:text-8xl font-DMSans font-medium">
+        <div className="text-6xl  font-DMSans font-medium">
           {temperature}
           {setunit}
         </div>
