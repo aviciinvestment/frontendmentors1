@@ -64,9 +64,9 @@ const LandingPageSearch = ({
     FetchApi(inputValue, unit);
   });
   return (
-    <div className=" mx-auto">
-      <div className="self-center sm:flex gap-3 mt-12 items-center">
-        <div className="flex flex-grow">
+    <div className="w-full">
+      <div className=" sm:flex mx-auto w-full justify-center  gap-3">
+        <div className="flex   justify-center sm:w-full md:w-auto ">
           <div className="flex py-4 px-6 rounded-l-xl items-center bg-gray-500 contrast-75 brightness-75 ">
             <img className="size-5" src={search} alt="" />
           </div>
@@ -78,17 +78,17 @@ const LandingPageSearch = ({
             id="input"
             //onMouseLeave={() => DropDownActive("DropDownClose")}
             placeholder="Search for a place..."
-            className="outline-none sm:min-w-[656px] w-full  text-2xl border-none rounded-r-xl items-center px-6 py-4 bg-gray-500 contrast-75 brightness-75 "
+            className="outline-none  w-full md:w-auto  text-2xl border-none rounded-r-xl items-center px-6 py-4 bg-gray-500 contrast-75 brightness-75 "
           />
         </div>
-        <div className="relative flex-shrink-0 ">
+        <div className="">
           <Buttons onSubmit={onSubmit}>Search</Buttons>
         </div>
       </div>
       <div
         className={`${
           eventOpen == "DropDownOpen" ? "visible" : "invisible"
-        } sm:min-w-[696px] text-left brightness-100 absolute cursor-pointer rounded-xl p-2 z-50 bg-gray-600 top-[270px]`}
+        } mt-2 text-left md:w-1/3 sm:w-10/12 w-11/12 mx-auto  right-0 left-0  brightness-100 absolute cursor-pointer rounded-xl p-2 z-50 bg-gray-600`}
       >
         <SearchDropDown
           SetEventOpen={SetEventOpen}
@@ -100,7 +100,7 @@ const LandingPageSearch = ({
       <div
         className={`${
           Search == "searching" ? "visible" : "invisible"
-        } flex gap-1 items-center text-lg px-2 py-3 rounded-lg sm:min-w-[696px] text-left brightness-100 absolute cursor-pointer p-2 z-50 bg-gray-600 top-[230px]`}
+        } mt-2 md:w-1/3 sm:w-10/12 w-11/12 mx-auto  flex gap-1 items-center text-lg px-2 py-3 rounded-lg  text-left brightness-100 absolute cursor-pointer p-2 z-50 bg-gray-600 `}
       >
         <RiLoader2Line className="animate-spin size-5" />
         Search In Progress

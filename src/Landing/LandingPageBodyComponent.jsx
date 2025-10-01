@@ -7,17 +7,20 @@ import LandingComponent4HourlyForcast from "./LandingComponent4HourlyForcast";
 const LandingPageBodyComponent = ({ weatherApi, landingCountry }) => {
   return (
     <main>
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 pt-[48px] md:grid-cols-3 gap-8">
-          <div className="col-span-2">
-            <LandingComponent1
-              weatherApi={weatherApi}
-              landingCountry={landingCountry}
-            />
-            <LandingComponent2WeatherCondition weatherApi={weatherApi} />
+      <div className="container mx-auto ">
+        <div className="flex flex-col md:flex-row justify-center  md:gap-12 gap-8">
+          <div className="flex flex-col justify-start  md:gap-12 gap-8">
+            <div className="flex flex-col  justify-center  md:gap-8 gap-4">
+              <LandingComponent1
+                weatherApi={weatherApi}
+                landingCountry={landingCountry}
+              />
+              <LandingComponent2WeatherCondition weatherApi={weatherApi} />{" "}
+            </div>
             <LandingPage3Forcast weatherApi={weatherApi} />
           </div>
-          <div className="col-span-1 ">
+
+          <div className="">
             <LandingComponent4HourlyForcast weatherApi={weatherApi} />
           </div>
         </div>

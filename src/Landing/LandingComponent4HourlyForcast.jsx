@@ -72,7 +72,7 @@ const LandingComponent4HourlyForcast = ({ weatherApi }) => {
     return date;
   }
   return (
-    <div className="bg-gray-500 overflow-y-scroll contrast-100 max-h-screen   brightness-75 w-full  rounded-2xl p-5 flex flex-col gap-2">
+    <div className="bg-gray-500 mx-auto  overflow-y-scroll contrast-100 h-[500px]   brightness-75 w-full  rounded-2xl p-5 flex flex-col gap-2">
       <div className="flex w-full py-2 justify-between">
         <div className="text-left">Hourly forecast</div>
         <div>

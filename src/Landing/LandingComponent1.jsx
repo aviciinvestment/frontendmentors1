@@ -17,7 +17,7 @@ const LandingComponent1 = ({ weatherApi, landingCountry }) => {
   return (
     <div
       className="bg-[url('./assets/images/bg-today-small.svg')] sm:bg-[url('./assets/images/bg-today-large.svg')] bg-no-repeat items-center contrast-50 brightness-95
-         rounded-[20px] bg-cover sm:flex-row flex justify-between flex-col py-20 px-6"
+         rounded-3xl bg-cover sm:flex-row flex justify-between flex-col py-20 px-6"
     >
       <div className="text-center sm:text-left">
         <h1 className="text-3xl uppercase text-white font-semibold">

@@ -17,7 +17,7 @@ const LandingPageBody = ({
   const [SearchedThrough, SetSearchedThrough] = useState(true);
 
   return (
-    <div className="flex text-center flex-col gap-12 text-white">
+    <div className="flex text-center flex-col gap-12 md:gap-16 text-white">
       <div className="text-6xl  font-Bricolage_Grotesque font-bold">
         How's the sky looking today?
       </div>

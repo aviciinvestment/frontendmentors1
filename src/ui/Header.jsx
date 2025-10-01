@@ -20,31 +20,33 @@ const Header = ({
 }) => {
   const [toggleDropDown, SettoggleDropDown] = useState(false);
   return (
-    <div className="flex items-center justify-between mx-4 sm:mx-20">
-      <div>
-        <img className="size-44" src={logo} alt="" />
-      </div>
-      <div
-        onClick={() => {
-          SettoggleDropDown(!toggleDropDown);
-        }}
-        className="flex text-white cursor-pointer bg-gray-500 contrast-75 brightness-75 items-center
-       hover:ring-1 ring-white px-4 rounded-[8px] py-3 gap-[10px]"
-      >
-        <img className="size-4" src={iconunit} alt="" />
-        <div
-          className="
-         text-white text-base relative cursor-pointer rounded-md
-         "
-        >
-          Units
+    <div>
+      <div className="flex items-center justify-between ">
+        <div>
+          <img className="size-44" src={logo} alt="" />
         </div>
-        <RiArrowDownSLine className="text-white text-[16px] cursor-pointer" />
+        <div
+          onClick={() => {
+            SettoggleDropDown(!toggleDropDown);
+          }}
+          className="flex text-white cursor-pointer bg-gray-500 contrast-75 brightness-75 items-center
+       hover:ring-1 ring-white px-4 rounded-lg py-3 gap-3"
+        >
+          <img className="size-4" src={iconunit} alt="" />
+          <div
+            className="
+         text-white text-base cursor-pointer rounded-md
+         "
+          >
+            Units
+          </div>
+          <RiArrowDownSLine className="text-white text-lg cursor-pointer" />
+        </div>
       </div>
       <div
         className={`text-white absolute z-50 ${
           toggleDropDown ? "visible" : "invisible"
-        } top-[70px] right-[45px] `}
+        }  right-4 sm:right-6 md:right-28`}
       >
         <HeaderDropdow
           unit={unit}

@@ -16,7 +16,7 @@ const SearchDropDown = ({ SetEventOpen, InputValueOnClick, inputValue }) => {
   });
 
   return (
-    <div className="cursor-pointer">
+    <div className="w-full cursor-pointer">
       {SearchedCountry.map((elem, i) => (
         <div
           onClick={() => {
