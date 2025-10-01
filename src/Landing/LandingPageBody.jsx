@@ -36,6 +36,8 @@ const LandingPageBody = ({
           <LandingLoadState />
         ) : (
           <LandingPageBodyComponent
+            Search={Search}
+            SetSearch={SetSearch}
             weatherApi={weatherApi}
             landingCountry={landingCountry}
           />

@@ -12,15 +12,14 @@ const LandingPage = () => {
   const [landingCountry, SetlandingCountry] = useState("");
   const [error, Seterror] = useState(null);
   const [apiState, SetApiState] = useState(true);
-  window.onload = function () {
-    // Your function call or code here
-    myFunction();
-  };
 
   function myFunction() {
     SetSearch("searched");
   }
-
+  weatherApi.then((res) => {
+    myFunction();
+    return res;
+  });
   useEffect(() => {
     weatherApi.then((response) => {
       if (response == "error") {
